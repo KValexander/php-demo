@@ -60,7 +60,7 @@
 						<p class="justify">Категория заявки: <b>%s</b></p>
 						<h4>Описание:</h4>
 						<p class="justify">%s</p>
-						<p class="del"><a href="scripts/delete_app.php?app_id=%s">Удалить заявку</a></p>
+						<p class="del"><a href="scripts/delete_app.php?app_id=%s" onclick="return app_delete()">Удалить заявку</a></p>
 						<p class="date">%s</p>
 					</div>',
 					$row["title"], $row["status"], $row["category"],
@@ -185,6 +185,14 @@
 		} else {
 			$("#mess").html("");
 		}
+	}
+
+	// Функция вывода диалогового окна на проверку действительно ли пользователь хочет удалить заявку
+	function app_delete() {
+		// Переменная выбора
+		let result = confirm("Вы действительно хотите удалить заявку?");
+		// Возвращение результата
+		return result;
 	}
 </script>
 
