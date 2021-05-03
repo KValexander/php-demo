@@ -69,14 +69,14 @@
 
 		// Событие отображения старого изображения при наведении
 		$(".image").mouseenter(function() {
-			$(this.lastElementChild).fadeOut(0);
-			$(this.firstElementChild).fadeIn(200);
+			$(this.lastElementChild).css("display", "none");
+			$(this.firstElementChild).css("display", "block");
 		});
 
 		// Событие отображения текущего изображения при отведении
 		$(".image").mouseleave(function() {
-			$(this.firstElementChild).fadeOut(0);
-			$(this.lastElementChild).fadeIn(200);
+			$(this.lastElementChild).css("display", "block");
+			$(this.firstElementChild).css("display", "none");
 		});
 
 		// Функция обновления счётчика количества заявок
