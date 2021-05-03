@@ -4,6 +4,3 @@ php_flag output_buffering on
 RewriteEngine  on
 RewriteRule ^admin/?$ app_page.php
 # ^admin/?$ адрес /admin по которому будет открываться файл app_page.php
-
-# Для laravel
-# RewriteRule ^(.*)$ public/$ [L]
