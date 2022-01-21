@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 
 	<header>
 		<div class="top">
@@ -29,14 +30,14 @@
 			<div class="head">Категории</div>
 			<form>
 				<div class="line">
-					<input type="text" placeholder="Категория">
+					<input type="text" name="category" placeholder="Категория (до 64 символов)" required pattern=".{1,64}">
 					<button>Добавить</button>
 				</div>
 			</form>
 			<form>
 				<div class="line">
-					<select>
-						<option selected disabled>Категории</option>
+					<select required name="category_id">
+						<option value selected disabled>Категории</option>
 						<option>Первая категория</option>
 						<option>Вторая категория</option>
 					</select>
@@ -53,8 +54,15 @@
 					<p>Категория заявки: <b>Первая категория</b></p>
 					<p class="center"><b>Описание:</b></p>
 					<p>Краткое описание заявки краткое описание заявки краткое описание заявки</p>
-					<form>
-						
+					<h3>Одобрение заявки</h3>
+					<form enctype="multipart/form-data" method="POST">
+						<input type="file" required name="image">
+						<button>Одобрить</button>
+					</form>
+					<h3>Отклонение заявки</h3>
+					<form method="POST">
+						<textarea name="rejection_reason" placeholder="Причина отклонения (до 256 символов)" required pattern=".{1,256}"></textarea>
+						<button>Отклонить</button>
 					</form>
 					<p class="small">2022-01-21 09:00:00</p>
 				</div>
@@ -65,6 +73,16 @@
 					<p>Категория заявки: <b>Первая категория</b></p>
 					<p class="center"><b>Описание:</b></p>
 					<p>Краткое описание заявки краткое описание заявки краткое описание заявки</p>
+					<h3>Одобрение заявки</h3>
+					<form enctype="multipart/form-data" method="POST">
+						<input type="file" required name="image">
+						<button>Одобрить</button>
+					</form>
+					<h3>Отклонение заявки</h3>
+					<form method="POST">
+						<textarea name="rejection_reason" placeholder="Причина отклонения (до 256 символов)" required pattern=".{1,256}"></textarea>
+						<button>Отклонить</button>
+					</form>
 					<p class="small">2022-01-21 09:00:00</p>
 				</div>
 				<div class="col">
@@ -74,6 +92,16 @@
 					<p>Категория заявки: <b>Первая категория</b></p>
 					<p class="center"><b>Описание:</b></p>
 					<p>Краткое описание заявки краткое описание заявки краткое описание заявки</p>
+					<h3>Одобрение заявки</h3>
+					<form enctype="multipart/form-data" method="POST">
+						<input type="file" required name="image">
+						<button>Одобрить</button>
+					</form>
+					<h3>Отклонение заявки</h3>
+					<form method="POST">
+						<textarea name="rejection_reason" placeholder="Причина отклонения (до 256 символов)" required pattern=".{1,256}"></textarea>
+						<button>Отклонить</button>
+					</form>
 					<p class="small">2022-01-21 09:00:00</p>
 				</div>
 			</div>
@@ -136,6 +164,8 @@
 					<p>Категория заявки: <b>Вторая категория</b></p>
 					<p class="center"><b>Описание:</b></p>
 					<p>Краткое описание заявки краткое описание заявки краткое описание заявки</p>
+					<p class="center"><b>Причина отклонения:</b></p>
+					<p>Краткая причина отклонения краткая причина отклонения</p>
 					<p class="small">2022-01-21 09:00:00</p>
 				</div>
 				<div class="col">
@@ -145,6 +175,8 @@
 					<p>Категория заявки: <b>Первая категория</b></p>
 					<p class="center"><b>Описание:</b></p>
 					<p>Краткое описание заявки краткое описание заявки краткое описание заявки</p>
+					<p class="center"><b>Причина отклонения:</b></p>
+					<p>Краткая причина отклонения краткая причина отклонения</p>
 					<p class="small">2022-01-21 09:00:00</p>
 				</div>
 				<div class="col">
@@ -154,6 +186,8 @@
 					<p>Категория заявки: <b>Вторая категория</b></p>
 					<p class="center"><b>Описание:</b></p>
 					<p>Краткое описание заявки краткое описание заявки краткое описание заявки</p>
+					<p class="center"><b>Причина отклонения:</b></p>
+					<p>Краткая причина отклонения краткая причина отклонения</p>
 					<p class="small">2022-01-21 09:00:00</p>
 				</div>
 			</div>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -93,19 +93,17 @@
 				</div>
 			</div>
 
-			
-
 			<div class="head">Добавить заявку</div>
-			<form action="admin.html">
-				<input type="text" placeholder="Название">
-				<textarea placeholder="Описание"></textarea>
-				<select>
-					<option selected disabled>Категория заявки</option>
+			<form action="admin.html" ectype="multipart/form-data" method="POST">
+				<input type="text" name="title" placeholder="Название (до 64 символов)" required pattern=".{1,64}">
+				<textarea name="description" placeholder="Описание (до 256 символов)" required pattern=".{1,256}"></textarea>
+				<select required name="category">
+					<option value selected disabled>Категория заявки</option>
 					<option>Первая категория</option>
 					<option>Вторая категория</option>
 				</select>
 				<p class="left">Фотография заявки</p>
-				<input type="file">
+				<input type="file" required name="image">
 				<button>Создать заявку</button>
 			</form>
 
