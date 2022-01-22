@@ -51,8 +51,8 @@ include "header.php";
 
 			<div class="head" id="login">Войти</div>
 			<form method="POST">
-				<input type="text" name="login" placeholder="Логин">
-				<input type="password" name="password" placeholder="Пароль">
+				<input type="text" name="login" required placeholder="Логин">
+				<input type="password" name="password" required placeholder="Пароль">
 				<button>Войти</button>
 			</form>
 
