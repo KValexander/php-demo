@@ -18,7 +18,7 @@ if(!$result) die("Error: ". $connect->error);
 $app = "";
 while($row = $result->fetch_assoc()) {
 	$do = ($row["status"] == "Новая") ?
-		sprintf('<p class="small"><a href="controllers/app_delete.php?app_id=%s">Удалить заявку</a></p>', $row["application_id"])
+		sprintf('<p class="small"><a onclick="return window.confirm(\'Вы действительно хотетите удалить заявку?\')" href="controllers/app_delete.php?app_id=%s">Удалить заявку</a></p>', $row["application_id"])
 		: "";
 	$refusal = ($row["status"] == "Отклонена") ? sprintf('<p class="center"><b>Причина отклонения:</b></p><p>%s</p>', $row["rejection_reason"]) : "";
 	$app .= sprintf('
