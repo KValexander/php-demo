@@ -16,5 +16,4 @@ let slider = {
 
 		slider.timer = setTimeout(() => slider.slide(++slider.n), 3000);
 	}
-}
-slider.slide(slider.n);
+} slider.slide(slider.n);
